@@ -1,0 +1,130 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:wght@200;300;700&display=swap');
+
+.body-home,.body-login
+{
+ /* background: url(./logo.png); */
+ background-size: cover;
+ background-attachment: fixed; 
+} 
+.black-fill{
+    background: rgba(0,0,0,0.65);
+    min-height: 100vh;
+}
+#homeNav{
+    background: rgba(255,255, 255,0.5) !important;
+}
+.welcome-text
+{
+    min-height: 80vh;
+    border-radius: 10px;
+}
+.welcome-text img
+{
+    width: 100px;
+}
+.welcome-text  h4
+{
+    font-family: 'Lobster Two', cursive;
+/* font-family: 'Montserrat', sans-serif; */
+    color:#eee ;
+    font-size: 51px;
+}
+.welcome-text  p
+{
+    color:#222 ;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: 4px;
+}
+#about
+{
+    min-height: 100vh;
+}
+#about .card
+{
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+} 
+#about .card h5
+{
+font-family: 'Lobster Two',cursive;
+font-size: 32px;
+}
+#contact 
+{
+    min-height: 100vh;
+}
+#contact  form
+{
+ max-width: 600px;
+ width: 90%;
+ background: rgba(255, 255, 255, 0.5);
+ padding: 20px;
+ border-radius: 5px;
+
+}
+#contact form h3
+{   text-align: center;
+    font-family: 'Lobster Two',cursive;
+}
+textarea
+{
+    resize: none;
+}
+.login
+{
+    max-width: 500px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+.login h3{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lobster Two',cursive;
+}
+.w-450
+{
+    width: 450px;
+    
+}
+.n-table
+{
+    max-width: 800px;
+ 
+}
+.form-w
+{
+    max-width: 600px;
+    width: 100%;
+}
+.container.page {
+    max-width: 794px;
+    /* A4 size: 8.27in x 11.69in */
+    margin: 20px auto;
+   
+}
+
+.report-card {
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+.student-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.student-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subject {
+    font-weight: bold;
+}
