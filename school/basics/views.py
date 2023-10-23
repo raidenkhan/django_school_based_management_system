@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Master
+from .models import Teacher
 from django.contrib import auth
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.hashers import make_password, check_password
 
 
 # Create your views here.
@@ -29,11 +31,13 @@ def setSession(request):
 def admin_index(request):
     admins = Master.objects.all()
     setSession(request)
+
     if request.method == "POST":
         username = request.POST["uname"]
         password = request.POST["pass"]
-        user = admins.filter(username=username, password=password).values()
-        print(f"\n\n\n Admins are {user}\n\n\n")
+        user = admins.filter(username=username).values()
+        print(user)
+
         if len(user) > 0:
             return render(request, "Master/index.html")
         else:
@@ -50,5 +54,11 @@ def admin_index(request):
 
 # TEACHERS
 def teachers(request):
-    teachers = Teacher.objects.all()
-    return render(request, "Master/teacher.html")
+    print("\n\n\n")
+    teachers = Teacher.objects.all().values()
+
+    return render(request, "Master/teacher.html", {"teachers": list(teachers)})
+
+
+def teacher_add(request):
+    return render(request, "Master/teacher-add.html")
